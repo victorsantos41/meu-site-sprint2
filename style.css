@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/img_qualidade_fundo_site_VZND/gasoduto_home_v2.jpg);
+    background-size: cover; /* Faz a img cobrir todo o fundo. */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centraliza a imagem. */
+    background-attachment: fixed; /* Mantem ela fixa ao rolar a página. */ 
+    font-family: 'Lexend Deca';
+}
+
+:root {
+    --tamanho-header: 80px;
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+/* LOGO VZND: */
+
+.div_logo img {
+
+    height: 200px;
+}
+
+.div_logo {
+
+    position: fixed;
+    margin-top: -25px;
+    top: 0px;
+}
+
+
+/* HEADER: */
+
+.header {
+
+    height: var(--tamanho-header);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    left: 0;  
+} 
+
+
+.container_header {
+
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: end;
+    right: 5%;
+    margin: 0px;
+}
+
+.navbar {
+    
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.botao_navbar {
+
+    background-color: transparent;
+    border: solid 3px #50FFDF;
+    border-radius: 8px;
+    padding: 15px 25px;
+    color: #50FFDF;
+    font-weight: 900;
+}
+
+.a_navbar {
+    color: #fff;
+    font-weight: 900;
+    margin-right: 20px;
+}
+
+.a_navbar:hover {
+    color: #50FFDF;
+}
+
+/* HOME: */
+
+.home {
+
+    position: relative;
+    top: 4vh;
+    margin: 20px;
+    padding-top: var(--tamanho-header);/* Evita que o conteúdo sobreponha o header. */
+    font-size: 25px;  
+    color: white;
+}
+
+.botao_home {
+
+    font-weight: 900;
+    font-size: 20px;
+    padding: 20px 40px;
+    background-color: #3DCEB4;
+    color: #fff;
+    border: solid 0px;
+    border-radius: 15px;
+
+}
+
+
+
+
+
+
+/* 
+Value	Common weight name
+400	    Normal
+500	    Medium
+600	    Semi Bold (Demi Bold)
+700	    Bold 
+800     Extra-bold
+900     Black
+*/
+
+
+
