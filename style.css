@@ -4,12 +4,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(/assets/img_qualidade_fundo_site_VZND/gasoduto_home_v2.jpg);
+    /* background-image: url(/assets/img_qualidade_fundo_site_VZND/gasoduto_home_v2.jpg); */
     background-size: cover; /* Faz a img cobrir todo o fundo. */
     background-repeat: no-repeat;
     background-position: center center; /* Centraliza a imagem. */
     background-attachment: fixed; /* Mantem ela fixa ao rolar a página. */ 
     font-family: 'Lexend Deca';
+    background-color: grey;
 }
 
 :root {
@@ -96,7 +97,7 @@ a {
     top: 4vh;
     margin: 20px;
     padding-top: var(--tamanho-header);/* Evita que o conteúdo sobreponha o header. */
-    font-size: 25px;  
+    font-size: 30px;  
     color: white;
 }
 
@@ -111,6 +112,23 @@ a {
     border-radius: 15px;
 
 }
+
+/* SERVIÇO: */
+
+.servico {
+
+    text-align: center;
+
+}
+
+
+.container_servico {
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 
 
 
