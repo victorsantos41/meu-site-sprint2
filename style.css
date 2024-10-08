@@ -20,7 +20,6 @@ body {
 a {
 
     text-decoration: none;
-
 }
 
 /* LOGO VZND: */
@@ -52,7 +51,7 @@ a {
 } 
 
 
-.container_header {
+.header .container {
 
     display: flex;
     width: 100%;
@@ -69,7 +68,7 @@ a {
     align-items: center;
 }
 
-.botao_navbar {
+.navbar button {
 
     background-color: transparent;
     border: solid 3px #50FFDF;
@@ -79,13 +78,15 @@ a {
     font-weight: 900;
 }
 
-.a_navbar {
+.navbar a {
+
     color: #fff;
     font-weight: 900;
     margin-right: 20px;
+    
 }
 
-.a_navbar:hover {
+.navbar a:hover {
     color: #50FFDF;
 }
 
@@ -101,7 +102,7 @@ a {
     color: white;
 }
 
-.botao_home {
+.home button {
 
     font-weight: 900;
     font-size: 20px;
@@ -122,13 +123,11 @@ a {
 }
 
 
-.container_servico {
+.servico .container {
 
     display: flex;
     justify-content: space-evenly;
 }
-
-
 
 
 
