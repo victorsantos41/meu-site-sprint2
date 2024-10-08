@@ -4,7 +4,7 @@
 body {
     margin: 0;
     padding: 0;
-    /* background-image: url(/assets/img_qualidade_fundo_site_VZND/gasoduto_home_v2.jpg); */
+    /* background-image: url(/meu-site-sprint2-main/assets/img_qualidade_fundo_site_VZND/gasoduto_home_v2.jpg); */
     background-size: cover; /* Faz a img cobrir todo o fundo. */
     background-repeat: no-repeat;
     background-position: center center; /* Centraliza a imagem. */
@@ -66,6 +66,7 @@ a {
     display: flex;
     list-style: none;
     align-items: center;
+
 }
 
 .navbar button {
@@ -119,14 +120,18 @@ a {
 .servico {
 
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 40vh;
 
 }
-
 
 .servico .container {
 
     display: flex;
     justify-content: space-evenly;
+    border: solid;
 }
 
 
