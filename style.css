@@ -6,8 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(assets/img_qualidade_fundo_site_VZND/home_escurecidav2.jpg);
-
+    background-image: url(assets/img_qualidade_fundo_site_VZND/home3v3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Lexend Deca';
@@ -48,7 +47,7 @@ a {
     position: fixed;
     width: 100%;
     top: 0; 
-    left: 0;  
+    left: 0px;  
 } 
 
 
@@ -67,6 +66,8 @@ a {
     display: flex;
     list-style: none;
     align-items: center;
+    position: relative;
+    top: 15px;
 
 }
 
@@ -98,7 +99,7 @@ a {
 
     position: relative;
     top: 4vh;
-    margin: 20px;
+    margin: 46px;
     padding-top: var(--tamanho-header);/* Evita que o conteúdo sobreponha o header. */
     font-size: 30px;  
     color: white;
@@ -109,7 +110,7 @@ a {
     font-weight: 900;
     font-size: 20px;
     padding: 20px 40px;
-    background-color: #3DCEB4;
+    background-color: #50FFDF   ;
     color: #fff;
     border: solid 0px;
     border-radius: 15px;
@@ -134,8 +135,6 @@ a {
     justify-content: space-evenly;
     border: solid;
 }
-
-
 
 
 
