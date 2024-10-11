@@ -1,16 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
+
+
 body {
     margin: 0;
     padding: 0;
-    /* background-image: url(/meu-site-sprint2-main/assets/img_qualidade_fundo_site_VZND/gasoduto_home_v2.jpg); */
-    background-size: cover; /* Faz a img cobrir todo o fundo. */
+    background-image: url(assets/img_qualidade_fundo_site_VZND/home_escurecidav2.jpg);
+
     background-repeat: no-repeat;
-    background-position: center center; /* Centraliza a imagem. */
-    background-attachment: fixed; /* Mantem ela fixa ao rolar a página. */ 
+    background-size: cover;
     font-family: 'Lexend Deca';
-    background-color: grey;
+    
 }
 
 :root {
