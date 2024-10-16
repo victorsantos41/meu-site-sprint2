@@ -70,6 +70,7 @@ a {
     justify-content: end;
     right: 4%;
     margin: 0px;
+    
 }
 
 .navbar {
@@ -79,7 +80,6 @@ a {
     align-items: center;
     position: relative;
     top: 15px;
-
 }
 
 
@@ -186,7 +186,7 @@ a {
 
 .simulador .itens {
     
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 .simulador input {
@@ -202,7 +202,7 @@ a {
 .simulador button {
 
     position: relative;
-    bottom: 20px;
+    bottom: 40px;
     padding: 15px 50px;
     border: solid 0px;
     border-radius: 8px;
