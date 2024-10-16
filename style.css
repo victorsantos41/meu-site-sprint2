@@ -7,11 +7,19 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url(assets/img_qualidade_fundo_site_VZND/home3v3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Lexend Deca';
-    
+}
+
+.body_home {
+
+    background-image: url(assets/img_qualidade_fundo_site_VZND/home3v3.jpg);;
+
+}
+
+.body_simulador {
+    background-image: url(assets/img_qualidade_fundo_site_VZND/simulador_testev3.png);
 }
 
 :root {
@@ -19,7 +27,6 @@ body {
 }
 
 a {
-
     text-decoration: none;
 }
 
@@ -75,6 +82,7 @@ a {
 
 }
 
+
 .navbar button {
 
     background-color: transparent;
@@ -96,6 +104,7 @@ a {
 .navbar a:hover {
     color: #50FFDF;
 }
+
 
 /* HOME: */
 
@@ -155,7 +164,6 @@ a {
 
 }
 
-
 .simulador {
 
     display: flex;
@@ -164,9 +172,10 @@ a {
     flex-direction: column;
     width: 80%;
     height: 60%;
-    border: solid 5px #50FFDF;
+    border: solid 4px #5de1e6;
     border-radius: 2rem;
     font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.366);
 }
 
 .simulador h3 {
@@ -177,13 +186,23 @@ a {
 
 .simulador .itens {
     
-    line-height: 1.4;
+    line-height: 1.5;
+}
 
+.simulador input {
+
+    border: solid 2px #5de1e6;
+    border-radius: 4px;
+    background: transparent;
+    padding: 8px;
+    color: white;
+    font-size: 20px;
 }
 
 .simulador button {
 
-
+    position: relative;
+    bottom: 20px;
     padding: 15px 50px;
     border: solid 0px;
     border-radius: 8px;
@@ -191,7 +210,6 @@ a {
     font-size: 20px;
     color: white;
     background-color: #3DCEB4;
-    margin-bottom: 25px;
 }
 
 
