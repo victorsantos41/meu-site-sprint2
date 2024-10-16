@@ -27,7 +27,10 @@ a {
 
 .div_logo img {
 
+    position: relative;
+    left:30px;
     height: 200px;
+    
 }
 
 .div_logo {
@@ -58,7 +61,7 @@ a {
     width: 100%;
     position: relative;
     justify-content: end;
-    right: 5%;
+    right: 4%;
     margin: 0px;
 }
 
@@ -99,9 +102,9 @@ a {
 .home {
 
     position: relative;
-    top: 4vh;
-    margin: 46px;
-    padding-top: var(--tamanho-header);/* Evita que o conteúdo sobreponha o header. */
+    top: 10%;
+    margin-left: 3.5%;
+    padding-top: var(--tamanho-header); /* Evita que o conteúdo sobreponha o header. */
     font-size: 30px;  
     color: white;
 }
@@ -111,10 +114,10 @@ a {
     font-weight: 900;
     font-size: 20px;
     padding: 20px 40px;
-    background-color: #50FFDF   ;
     color: #fff;
     border: solid 0px;
     border-radius: 15px;
+    background: #3DCEB4;
 
 }
 
@@ -135,6 +138,60 @@ a {
     display: flex;
     justify-content: space-evenly;
     border: solid;
+}
+
+/* SIMULADOR: */
+
+.caixa_simulador {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: 90%;
+    
+    color: white;
+
+}
+
+
+.simulador {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 60%;
+    border: solid 5px #50FFDF;
+    border-radius: 2rem;
+    font-size: 25px;
+}
+
+.simulador h3 {
+
+    width: 80%;
+    color: white;
+}
+
+.simulador .itens {
+    
+    line-height: 1.4;
+
+}
+
+.simulador button {
+
+
+    padding: 15px 50px;
+    border: solid 0px;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 20px;
+    color: white;
+    background-color: #3DCEB4;
+    margin-bottom: 25px;
 }
 
 
