@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
-
 
 
 body {
@@ -159,7 +157,6 @@ a {
     flex-direction: column;
     width: auto;
     height: 90%;
-    
     color: white;
 
 }
@@ -172,10 +169,10 @@ a {
     flex-direction: column;
     width: 80%;
     height: 60%;
-    border: solid 4px #5de1e6;
+    border: solid 4px rgba(255, 255, 255, 0.63);
     border-radius: 2rem;
     font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(0, 0, 0, 0.712);
 }
 
 .simulador h3 {
@@ -210,20 +207,13 @@ a {
     font-size: 20px;
     color: white;
     background-color: #3DCEB4;
+    cursor: pointer;
 }
 
+/* DIV ECONOMIA */
 
+.economia {
 
+    color: green;
 
-/* 
-Value	Common weight name
-400	    Normal
-500	    Medium
-600	    Semi Bold (Demi Bold)
-700	    Bold 
-800     Extra-bold
-900     Black
-*/
-
-
-
+}
