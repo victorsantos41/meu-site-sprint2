@@ -32,24 +32,30 @@
     </div>
     
  <div class="caixa_simulador" id="caixa_simulador">
-    <h1 style="color: white;">Descubra o quanto você pode economizar com nossa tecnologia!</h1>
+    <h1 style="color: white;">Descubra o quanto você pode <span style="color:#50FFDF">economizar</span> com nossa tecnologia!</h1>
   
     <div class="simulador"> 
        
         <div>
             <ul class="itens">
-                <h3>Preencha os dados abaixo e veja como a solução da  <span style="color: white; font-weight: bold;">VZ</span><span style="font-weight: bold; color: #50FFDF;">ND</span> pode maximizar seus lucros de maneira imediata:</h3>
-                <li>Quanto é o consumo mensal de gás na sua empresa? (Em m3)</li> 
-                <input id="ipt_consumo_mensal" type="text">
+                <h3>Preencha os dados abaixo e veja como a solução da  <span style="color: white; font-weight: bold;">VZ</span><span style="font-weight: bold; color: #50FFDF;">ND</span> 
+                    pode maximizar seus lucros de maneira imediata:</h3>
+
                 <li>Quantos vazamentos sua empresa teve em gasodutos no útimo mês?</li> 
-                <input id="ipt_vazamentos" type="text">
-                <li>Qual a média da quantidade de gás que sua empresa perdeu em 1 hora de vazamento? (Em m3/h)</li> 
-                <input id="ipt_perdeu_gas" type="text">
-                <li>Na sua empresa, qual a média de tempo de detecção de um vazamento? (Em minutos)</li> 
-                <input id="ipt_tempo_deteccao" type="text">
+                <input id="ipt_vazamentos" type="number">
+
+                <li>Quanto tempo geralmente dura um vazamento? (Em minutos)</li> 
+                <input id="ipt_duraçao_vazamento" type="number">
+
+                <li>Em média, quanto tempo sua equipe detecta um vazamento? (Em minutos)</li> 
+                <input id="ipt_tempo_detecçao" type="number">
+
+                <li>Qual a quantidade de gás perdida no vazamento por minuto? (Em m3)</li> 
+                <input id="ipt_perdeu_gas" type="number">
+                
             </ul>
         </div>
-            <button onclick="Economia()">VEJA SUA ECONOMIA</button>
+            <div class="div_botao_simulador"><button onclick="Economia()">VEJA SUA ECONOMIA</button></div>
     </div>
 </div>
 
@@ -62,19 +68,26 @@
 
     function Economia() {
 
-    var consumo_mensal = Number(ipt_consumo_mensal.value)
     var vazamentos = Number(ipt_vazamentos.value)
+    var duraçao_vazamento = Number(ipt_duraçao_vazamento.value)
+    var tempo_detecçao = Number(ipt_tempo_detecçao.value)
     var perdeu_gas = Number(ipt_perdeu_gas.value)
-    var tempo_deteccao = Number(ipt_tempo_deteccao.value)
 
-    var novo_tempo = tempo_deteccao * 0.1 // redução de 90% no tempo de detecção
-    var novo_perdeu_gas =   
+    var novo_tempo  = (tempo_detecçao * 0.1)
+    var nova_duraçao = duraçao_vazamento - (tempo_detecçao - novo_tempo)
+    var nova_duracao_porcentagem = nova_duraçao / duraçao_vazamento
+
+    var perdeu_no_mes = perdeu_gas * duraçao_vazamento * vazamentos
+    var novo_perdeu_no_mes = perdeu_gas * nova_duraçao * vazamentos
+
+    var economia = perdeu_no_mes - novo_perdeu_no_mes 
+    var economia_porcentagem = (economia / perdeu_no_mes) * 100
+
 
 
     // CAIXA ECONOMIA QUE SERÁ EXIBIDA PARA O CLIENTE:
         caixa_simulador.innerHTML = `
 
-        
         <h1 style="color: white;">Com a solução desenvolvida pela VZ<span style="color:#50FFDF">ND</span></h1>
   
     <div class="simulador"> 
@@ -82,15 +95,18 @@
         <div>
             <ul class="itens">
                 <h2>Baseando-se no cenário da sua empresa, nossa solução te traz:</h2>
+
                 <h2>Uma redução de até <span style="color:#50FFDF">90%</span> no tempo de detecção de vazamento de gás.</h2>
-                <h3>Com isso, o <span style="color:#50FFDF">novo</span> cenário da sua empresa com a solução VZ<span style="color:#50FFDF">ND</span>:</h3>
-                <li>Tempo de detecção de um vazamento: X min ⏳</li>
-                <li>Economia de gás em m3 em 1 mês: Y m3 de gás 📈</li> 
-                <li>Aumento na produtividade da equipe ⚡</li> 
-                <li>Prevenção de acidentes nos gasodutos ✅</li> 
+
+                <h3>Com isso, o <span style="color:#50FFDF">novo</span> cenário da sua empresa com a solução VZ<span style="color:#50FFDF">ND</span> possibilita:</h3>
+
+                <li>Detectar um vazamento em <span style="color:#50FFDF"><b>${novo_tempo} min</b></span> (${tempo_detecçao * 0.9} min mais eficiente) ⚡</li>
+                <li>Vazamentos durando no máximo <span style="color:#50FFDF"><b>${nova_duraçao}min</b></span> (${nova_duracao_porcentagem} min mais curtos) 🕗</li> 
+                <li>Economizar <span style="color:#50FFDF"><b>${economia} m3</b></span> de gás no mês (${economia_porcentagem}% a mais) 📈</li> 
+                <li>Maior prevenção de acidentes nos gasodutos ✅</li> 
             </ul>
         </div>
-            <div class="div_botao_solucao"><button onclick="Economia()">ADQUIRIR SOLUÇÃO</button></div>
+            <div class="div_botao_economia"><button onclick="Economia()">ADQUIRIR SOLUÇÃO</button></div>
     </div>
     
 
@@ -103,11 +119,6 @@
 
     }
 
-    .caixa_simulador h2 {
-
-    font-size: 30px;
-
-}
 
 .simulador .itens {
 
@@ -115,14 +126,13 @@
 
 }
 
-
 .simulador h3 {
 
     width: 100%;
 
 }
 
-.div_botao_solucao {
+.div_botao_economia {
 
     height: 100%;
     width: 100%;
@@ -130,6 +140,7 @@
     position: relative;
     justify-content: center;
     align-items: flex-end;
+    top: 18px;
 
 }
             </style>

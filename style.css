@@ -17,7 +17,8 @@ body {
 }
 
 .body_simulador {
-    background-image: url(assets/img_qualidade_fundo_site_VZND/simulador_testev3.png);
+    background-image: url(assets/img_qualidade_fundo_site_VZND/simulador2v3.jpg);
+    background-color: black;
 }
 
 :root {
@@ -168,11 +169,17 @@ a {
     align-items: center;
     flex-direction: column;
     width: 80%;
-    height: 60%;
+    height: 65%;
     border: solid 4px rgba(255, 255, 255, 0.63);
     border-radius: 2rem;
     font-size: 25px;
     background-color: rgba(0, 0, 0, 0.712);
+}
+
+.simulador ul {
+
+    font-size: 22px;
+
 }
 
 .simulador h3 {
@@ -183,7 +190,7 @@ a {
 
 .simulador .itens {
     
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .simulador input {
@@ -194,6 +201,17 @@ a {
     padding: 8px;
     color: white;
     font-size: 20px;
+}
+
+.div_botao_simulador {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+
 }
 
 .simulador button {
@@ -209,3 +227,4 @@ a {
     background-color: #3DCEB4;
     cursor: pointer;
 }
+
