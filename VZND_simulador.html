@@ -16,8 +16,7 @@
 
     <div class="header">
         <div class="div_logo">
-            <img src="
-            assets/img vznd/vznd.png" alt="Logo VazaNada">
+            <img src="assets/img vznd/vznd.png" alt="Logo VazaNada">
         </div>
         <div class="container">
             <ul class="navbar">
@@ -34,14 +33,16 @@
  <div class="caixa_simulador" id="caixa_simulador">
     <h1 style="color: white;">Descubra o quanto você pode <span style="color:#50FFDF">economizar</span> com nossa tecnologia!</h1>
   
+
     <div class="simulador"> 
        
         <div>
+            
             <ul class="itens">
                 <h3>Preencha os dados abaixo e veja como a solução da  <span style="color: white; font-weight: bold;">VZ</span><span style="font-weight: bold; color: #50FFDF;">ND</span> 
                     pode maximizar seus lucros de maneira imediata:</h3>
-
-                <li>Quantos vazamentos sua empresa teve em gasodutos no útimo mês?</li> 
+                <form action="">
+                <li>Quantos vazamentos sua empresa teve em gasodutos no útimo mês?</li>
                 <input id="ipt_vazamentos" type="number">
 
                 <li>Quanto tempo geralmente dura um vazamento? (Em minutos)</li> 
@@ -51,12 +52,13 @@
                 <input id="ipt_tempo_detecçao" type="number">
 
                 <li>Qual a quantidade de gás perdida no vazamento por minuto? (Em m3)</li> 
-                <input id="ipt_perdeu_gas" type="number">
-                
+                <input id="ipt_perdeu_gas" type="number">  
             </ul>
         </div>
             <div class="div_botao_simulador"><button onclick="Economia()">VEJA SUA ECONOMIA</button></div>
+        
     </div>
+
 </div>
 
 </body>
@@ -74,8 +76,8 @@
     var perdeu_gas = Number(ipt_perdeu_gas.value)
 
     var novo_tempo  = (tempo_detecçao * 0.1)
-    var nova_duraçao = duraçao_vazamento - (tempo_detecçao - novo_tempo)
-    var nova_duracao_porcentagem = nova_duraçao / duraçao_vazamento
+    var nova_duraçao = Math.ceil(duraçao_vazamento - (tempo_detecçao - novo_tempo))
+    var nova_duracao_porcentagem = (nova_duraçao / duraçao_vazamento) * 100
 
     var perdeu_no_mes = perdeu_gas * duraçao_vazamento * vazamentos
     var novo_perdeu_no_mes = perdeu_gas * nova_duraçao * vazamentos
@@ -101,7 +103,7 @@
                 <h3>Com isso, o <span style="color:#50FFDF">novo</span> cenário da sua empresa com a solução VZ<span style="color:#50FFDF">ND</span> possibilita:</h3>
 
                 <li>Detectar um vazamento em <span style="color:#50FFDF"><b>${novo_tempo} min</b></span> (${tempo_detecçao * 0.9} min mais eficiente) ⚡</li>
-                <li>Vazamentos durando no máximo <span style="color:#50FFDF"><b>${nova_duraçao}min</b></span> (${nova_duracao_porcentagem} min mais curtos) 🕗</li> 
+                <li>Vazamentos durando no máximo <span style="color:#50FFDF"><b>${nova_duraçao} min</b></span> (${nova_duracao_porcentagem} % mais curtos) 🕗</li> 
                 <li>Economizar <span style="color:#50FFDF"><b>${economia} m3</b></span> de gás no mês (${economia_porcentagem}% a mais) 📈</li> 
                 <li>Maior prevenção de acidentes nos gasodutos ✅</li> 
             </ul>

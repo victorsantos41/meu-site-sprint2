@@ -35,8 +35,8 @@ a {
 
     position: relative;
     left:30px;
-    height: 200px;
-    
+    height: 200px;  
+    cursor: pointer;
 }
 
 .div_logo {
@@ -44,6 +44,7 @@ a {
     position: fixed;
     margin-top: -25px;
     top: 0px;
+    cursor: pointer;
 }
 
 
