@@ -23,6 +23,7 @@ body {
 
 :root {
     --tamanho-header: 80px;
+    --tamanho-footer: 70px;
 }
 
 a {
@@ -219,13 +220,39 @@ a {
 
     position: relative;
     bottom: 40px;
-    padding: 15px 50px;
+    padding: 15px 50px; 
     border: solid 0px;
     border-radius: 8px;
     font-weight: 900;
     font-size: 20px;
     color: white;
-    background-color: #3DCEB4;
+    background-color: #008a9c;
     cursor: pointer;
 }
+
+/* FOOTER: */
+
+.footer {
+    background-color: #008a9c;
+    height: var(--tamanho-footer);
+    color: #fff;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 0px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.container {
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.footer h4{
+    margin: 0px;
+}
+
 
